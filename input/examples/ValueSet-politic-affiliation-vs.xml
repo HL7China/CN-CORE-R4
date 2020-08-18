@@ -7,10 +7,10 @@
     <url value="http://ValueSet.hl7fhir.cn/politic-affiliation-vs"/>
     <version value="V1"/>
     <name value="politic-affiliation"/>
-    <title value="ÕþÖÎÃæÃ²"/>
+    <title value="æ”¿æ²»é¢è²Œ"/>
     <status value="draft"/>
     <publisher value="hl7fhir.cn"/>
-    <description value="±¾¹æÔò¹æ¶¨ÁËÔöÖµÃæÃ²´úÂë£¬ËüÊÊÓÃÓÚÊ¹ÓÃÐÅÏ¢´¦ÀíÏµÍ³½øÐÐÈËÊÂµµ°¸¹ÜÀí£¬Éç»áµ÷¶È£¬¹«°²»§¼®¹ÜÀíµÈ·½Ãæ¹¤×÷Ê±ÐÅÏ¢´¦ÀíÖ®¼äµÄÐÅÏ¢½»»»¡£"/>
+    <description value="æœ¬è§„åˆ™è§„å®šäº†å¢žå€¼é¢è²Œä»£ç ï¼Œå®ƒé€‚ç”¨äºŽä½¿ç”¨ä¿¡æ¯å¤„ç†ç³»ç»Ÿè¿›è¡Œäººäº‹æ¡£æ¡ˆç®¡ç†ï¼Œç¤¾ä¼šè°ƒåº¦ï¼Œå…¬å®‰æˆ·ç±ç®¡ç†ç­‰æ–¹é¢å·¥ä½œæ—¶ä¿¡æ¯å¤„ç†ä¹‹é—´çš„ä¿¡æ¯äº¤æ¢ã€‚"/>
     <expansion>
         <timestamp value="2020-07-14T16:24:34.060+08:00"/>
         <total value="13"/>
@@ -18,67 +18,67 @@
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="01"/>
-            <display value="ÖÐ¹ú¹²²úµ³µ³Ô±"/>
+            <display value="ä¸­å›½å…±äº§å…šå…šå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="02"/>
-            <display value="ÖÐ¹ú¹²²úµ³Ô¤±¸µ³Ô±"/>
+            <display value="ä¸­å›½å…±äº§å…šé¢„å¤‡å…šå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="03"/>
-            <display value="ÖÐ¹ú¹²²úÖ÷ÒåÇàÄêÍÅÍÅÔ±"/>
+            <display value="ä¸­å›½å…±äº§ä¸»ä¹‰é’å¹´å›¢å›¢å‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="04"/>
-            <display value="ÖÐ¹ú¹úÃñµ³¸ïÃüÎ¯Ô±»á»áÔ±"/>
+            <display value="ä¸­å›½å›½æ°‘å…šé©å‘½å§”å‘˜ä¼šä¼šå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="05"/>
-            <display value="ÖÐ¹úÃñÖ÷Í¬ÃË»á"/>
+            <display value="ä¸­å›½æ°‘ä¸»åŒç›Ÿä¼š"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="06"/>
-            <display value="ÖÐ¹úÃñÖ÷½¨¹ú»á»áÔ±"/>
+            <display value="ä¸­å›½æ°‘ä¸»å»ºå›½ä¼šä¼šå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="07"/>
-            <display value="ÖÐ¹úÃñÖ÷´Ù½ø»á»áÔ±"/>
+            <display value="ä¸­å›½æ°‘ä¸»ä¿ƒè¿›ä¼šä¼šå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="08"/>
-            <display value="ÖÐ¹úÅ©¹¤ÃñÖ÷µ³µ³Ô±"/>
+            <display value="ä¸­å›½å†œå·¥æ°‘ä¸»å…šå…šå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="09"/>
-            <display value="ÖÐ¹úÖÂ¹«µ³µ³Ô±"/>
+            <display value="ä¸­å›½è‡´å…¬å…šå…šå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="10"/>
-            <display value="¾ÅÈýÑ§ÉçÉçÔ±"/>
+            <display value="ä¹ä¸‰å­¦ç¤¾ç¤¾å‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="11"/>
-            <display value="Ì¨ÍåÃñÖ÷×ÔÖÎÍ¬ÃËÃËÔ±"/>
+            <display value="å°æ¹¾æ°‘ä¸»è‡ªæ²»åŒç›Ÿç›Ÿå‘˜"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="12"/>
-            <display value="ÎÞµ³ÅÉÃñÖ÷ÈËÊ¿"/>
+            <display value="æ— å…šæ´¾æ°‘ä¸»äººå£«"/>
         </contains>
         <contains>
             <system value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/politic-affiliation"/>
             <code value="13"/>
-            <display value="ÈºÖÚ"/>
+            <display value="ç¾¤ä¼—"/>
         </contains>
     </expansion>
 </ValueSet>

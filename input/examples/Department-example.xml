@@ -79,6 +79,6 @@
   <!--科室简介 -->
   <extension url="http://StructureDefinition.hl7fhir.cn/BriefIntroduction">
     <!--科室简介 -->
-    <valueStirng value="XXXXXXXX科室针对【血小板减少】、【血小板增多】、【过敏性紫癜】、【贫血】等病提供专业治疗方案。"/>
+    <valueStrng value="XXXXXXXX科室针对【血小板减少】、【血小板增多】、【过敏性紫癜】、【贫血】等病提供专业治疗方案。"/>
   </extension>
 </Organization>

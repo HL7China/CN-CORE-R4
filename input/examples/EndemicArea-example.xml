@@ -79,6 +79,6 @@
   <!--病区简介 -->
   <extension url="http://StructureDefinition.hl7fhir.cn/BriefIntroduction">
     <!--病区简介 -->
-    <valueStrng value="XXXXXXXX病区针对【血小板减少】、【血小板增多】、【过敏性紫癜】、【贫血】等病提供专业治疗方案。"/>
+    <valueStirng value="XXXXXXXX病区针对【血小板减少】、【血小板增多】、【过敏性紫癜】、【贫血】等病提供专业治疗方案。"/>
   </extension>
 </Organization>

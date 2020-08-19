@@ -61,7 +61,7 @@
 				<!-- 本地资源定义（Practitioner） -->
 				<reference value="StructureDefinition/Practitioner"/>
 			</reference>
-			<description value="直接或间接参与提供医疗健康服务的人员"/>
+			<description value="直接或间接参与提供医疗健康服务的人员及其从业资格证"/>
 		</resource>
 
 		<resource>
@@ -155,7 +155,7 @@
 				<!-- 本地资源定义（ServiceRequest） -->
 				<reference value="StructureDefinition/laboratory-request"/>
 			</reference>
-			<description value="实验室检验申请"/>
+			<description value="描述医院内 临床医生对患者提交实验室检验申请的资源。"/>
 		</resource>
 
 		<resource>
@@ -271,10 +271,10 @@
 
 		<resource>
 			<reference>
-				<!-- 优先级（priority） -->
-				<reference value="http://example.org/fhir/StructureDefinition/request-priority"/>
+				<!-- 请求紧急程度（priority） -->
+				<reference value="http://StructureDefinition.hl7fhir.cn/request-priority"/>
 			</reference>
-			<description value="优先级"/>
+			<description value="请求紧急程度"/>
 		</resource>
 		<resource>
 			<reference>

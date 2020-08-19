@@ -3,7 +3,7 @@
 	<!-- 0..1 号源信息逻辑ID -->
 	<id value="OutpatientRegistrationSource-example"/>
 	<meta>
-		<profile value="http://example.org/fhir/StructureDefinition/outpatient-registration-source"/>
+		<profile value="http://StructureDefinition.hl7fhir.cn/outpatient-registration-source"/>
 	</meta>
 
 	<!-- 1..1 预约状态 （等待预约）-->

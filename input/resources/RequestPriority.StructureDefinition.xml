@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="request-priority" />
-  <url value="http://example.org/fhir/StructureDefinition/request-priority" />
+  <url value="http://StructureDefinition.hl7fhir.cn/request-priority" />
   <name value="RequestPriority" />
   <title value="请求紧急程度" />
   <status value="draft" />
@@ -23,7 +23,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://example.org/fhir/StructureDefinition/request-priority" />
+      <fixedUri value="http://StructureDefinition.hl7fhir.cn/request-priority" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

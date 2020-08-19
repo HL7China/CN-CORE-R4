@@ -260,13 +260,6 @@
 			<description value="描述人的生理性别  遵循标准 GB/T 2261.1"/>
 		</resource>
 		
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Period） -->
-				<reference value="StructureDefinition/Period"/>
-			</reference>
-			<description value="由开始和结束时间组成的时间段范围。"/>
-		</resource>
 
 		<resource>
 			<reference>

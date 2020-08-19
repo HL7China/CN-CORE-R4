@@ -212,7 +212,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://example.org/fhir/StructureDefinition/request-priority" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/request-priority" />
       </type>
       <binding>
         <strength value="required" />

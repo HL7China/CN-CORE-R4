@@ -206,6 +206,14 @@
 
 		<resource>
 			<reference>
+				<!-- 本地资源定义（Coding） -->
+				<reference value="StructureDefinition/Coding"/>
+			</reference>
+			<description value="术语编码类型"/>
+		</resource>
+
+		<resource>
+			<reference>
 				<!-- 本地资源定义（ChineseEthnicity） -->
 				<reference value="StructureDefinition/ChineseEthnicity"/>
 			</reference>

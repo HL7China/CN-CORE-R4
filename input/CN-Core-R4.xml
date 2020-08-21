@@ -71,7 +71,7 @@
 			</reference>
 			<description value="门诊号源时段"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（schedule） -->
@@ -79,8 +79,8 @@
 			</reference>
 			<description value="门诊排班，号源所属班次，是排班表、排期表的组成部分，该资源主要描述门诊排班"/>
 		</resource>
-		
-		
+
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Appointment ） -->
@@ -88,8 +88,8 @@
 			</reference>
 			<description value="该资源描述门诊号源信息，包括号源、挂号都是用该资源。"/>
 		</resource>
-			
-		
+
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Department） -->
@@ -105,7 +105,7 @@
 			</reference>
 			<description value="正式或非正式认可的群体或组织。包括医疗集团、医院、院区、科室、公司、机构、公司、部门、社区团体、医疗实践团体、医保、商保等。"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Hospital） -->
@@ -113,8 +113,8 @@
 			</reference>
 			<description value="描述医院基本信息"/>
 		</resource>
-		
-		
+
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（EndemicArea） -->
@@ -123,8 +123,8 @@
 			<description value="描述病区基本信息"/>
 		</resource>
 
-		
-		
+
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Diagnose） -->
@@ -133,7 +133,7 @@
 			<description value="诊断信息，从医学角度对人们的精神和体质状态作出的判断。对正常人的健康状态、劳动能力和某一特定的生理过程的判断；司法部门判定血缘关系和伤害性质也属诊断。用来认识疾病的诊断最广泛，是治疗、预后、预防的前提。"/>
 		</resource>
 
-		
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（ChiefComplaint）  -->
@@ -141,7 +141,7 @@
 			</reference>
 			<description value="是病人（来访者）自述自己的症状或（和）体征、性质，以及持续时间等内容。"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义 （ServiceRequest）-->
@@ -173,7 +173,7 @@
 			</reference>
 			<description value="联系方式，包括电话、传真、邮件等"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（CodeableConcept） -->
@@ -267,7 +267,7 @@
 			</reference>
 			<description value="描述人的生理性别  遵循标准 GB/T 2261.1"/>
 		</resource>
-		
+
 
 		<resource>
 			<reference>
@@ -329,7 +329,7 @@
 			<description value="演示如何定义和引用既往史的简单示例"/>
 			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/previous-history"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -339,8 +339,8 @@
 			<description value="演示如何定义和引用医护人员的简单示例"/>
 			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Practitioner"/>
 		</resource>
-		
-		
+
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -350,8 +350,8 @@
 			<description value="演示如何定义和引用门诊排班信息的简单示例"/>
 			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/outpatient-schedule"/>
 		</resource>
-		
-		
+
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -362,9 +362,9 @@
 			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/outpatient-registration-source"/>
 		</resource>
 
-		
-		
-		
+
+
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -379,13 +379,13 @@
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
-				<reference value="Organization/Organization-example"/>
+				<reference value="Organization/OutpatientConsultationRoom-example"/>
 			</reference>
 			<name value="门诊诊室示例"/>
-			<description value="演示如何定义和引用组织机构的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Organization"/>
+			<description value="演示如何定义和引用门诊诊室的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/outpatient-consultation-room"/>
 		</resource>
-			
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -396,7 +396,7 @@
 			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Organization"/>
 		</resource>
 
-	
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -406,7 +406,7 @@
 			<description value="演示如何定义和引用病区的简单示例"/>
 			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/EndemicArea"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -418,14 +418,14 @@
 		</resource>
 
 		<resource>
-      <reference>
-        <!-- 资源示例 -->
-        <reference value="Organization/Diagnose-example"/>
-      </reference>
-      <name value="诊断示例"/>
-      <description value="演示如何定义和引用诊断的简单示例"/>
-      <exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Diagnose"/>
-    </resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Organization/Diagnose-example"/>
+			</reference>
+			<name value="诊断示例"/>
+			<description value="演示如何定义和引用诊断的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Diagnose"/>
+		</resource>
 
 		<resource>
 			<reference>
@@ -436,7 +436,7 @@
 			<description value="演示如何定义和引用主诉的简单示例"/>
 			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/chief-complaint"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -482,13 +482,13 @@
 			</reference>
 			<name value="诊断验证状态"/>
 		</resource>
-		
+
 		<resource>
 			<reference>
-				<!-- 疾病诊断值域集（ICD-10 ） -->
+				<!-- 疾病诊断编码值域集（ICD-10 ） -->
 				<reference value="ValueSet/condition-code-vs"/>
 			</reference>
-			<name value="疾病诊断"/>
+			<name value="疾病诊断编码"/>
 		</resource>
 
 		<resource>
@@ -522,7 +522,7 @@
 			</reference>
 			<name value="症状编码"/>
 		</resource>
-		
+
 
 		<resource>
 			<reference>
@@ -547,12 +547,12 @@
 			</reference>
 			<name value="卫生机构(组织)类别"/>
 		</resource>
-		
+
 
 		<resource>
 			<reference>
 				<!-- 医院等级值域集 -->
-				<reference value="ValueSet/ValueSet-hospitallevel-vs"/>
+				<reference value="ValueSet/hospitallevel-vs"/>
 			</reference>
 			<name value="医院等级"/>
 		</resource>
@@ -565,8 +565,8 @@
 			<name value="经济类型分类"/>
 		</resource>
 
-		
-		
+
+
 
 		<resource>
 			<reference>
@@ -596,15 +596,15 @@
 			</reference>
 			<name value=" 实验室检验分类"/>
 		</resource>
-		
-		
+
+
 
 		<resource>
 			<reference>
-				<!-- 优先级值域集 -->
+				<!-- 请求紧急程度值域集 -->
 				<reference value="ValueSet/request-priority-vs"/>
 			</reference>
-			<name value=" 优先级"/>
+			<name value=" 请求紧急程度"/>
 		</resource>
 
 		<resource>
@@ -625,53 +625,31 @@
 
 		<resource>
 			<reference>
-				<!-- 明细代码值域集 -->
+				<!-- 检查检验代码值域集 -->
 				<reference value="ValueSet/procedure-code-vs"/>
 			</reference>
-			<name value=" 明细代码"/>
+			<name value=" 检查检验代码"/>
 		</resource>
-
 		
+	
 
-		<resource>
-			<reference>
-				<!-- 诊断信息值域集 -->
-				<reference value="ValueSet/condition-code-vs"/>
-			</reference>
-			<name value=" 诊断信息"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 检查部位值域集 -->
-				<reference value="ValueSet/body-site"/>
-			</reference>
-			<name value=" 检查部位信息"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 卫生信息数据元目录值域集 -->
-				<reference value="ValueSet/health-data-element-dictionary-vs"/>
-			</reference>
-			<name value=" 卫生信息数据元目录"/>
-		</resource>
+	
 
 
 		<resource>
 			<reference>
-				<!-- 门诊诊室状态值域集 -->
+				<!-- 位置状态值域集 -->
 				<reference value="ValueSet/location-status-vs"/>
 			</reference>
-			<name value="门诊诊室状态"/>
+			<name value="位置状态"/>
 		</resource>
 
 		<resource>
 			<reference>
-				<!-- 诊室操作状态值域集 -->
+				<!-- 位置操作状态值域集 -->
 				<reference value="ValueSet/operation-status-vs"/>
 			</reference>
-			<name value="诊室操作状态"/>
+			<name value="位置操作状态"/>
 		</resource>
 		<resource>
 			<reference>
@@ -719,10 +697,10 @@
 
 		<resource>
 			<reference>
-				<!-- 预约患者的类型值域集 -->
+				<!-- 预约类型值域集 -->
 				<reference value="ValueSet/appointment-type-vs"/>
 			</reference>
-			<name value=" 预约患者的类型"/>
+			<name value=" 预约类型"/>
 		</resource>
 
 		<resource>
@@ -754,8 +732,18 @@
 			</reference>
 			<name value="政治面貌"/>
 		</resource>
+
+		<resource>
+			<reference>
+				<!-- 联系人关系域集 -->
+				<reference value="ValueSet/contact-relationship-vs"/>
+			</reference>
+			<name value="联系人关系"/>
+		</resource>
+
 		
-		
+
+
 		<!--    <resource>
       <reference>
         <reference value="Library/example"/>

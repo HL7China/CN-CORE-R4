@@ -4,7 +4,7 @@
     <meta>
         <lastUpdated value="2020-07-01T11:15:19.101+08:00"/>
     </meta>
-    <url value="http://CodeSystem.hl7fhir.cn/WS/api/CodeSystem/hospitallevel-vs"/>
+    <url value="http://ValueSet.hl7fhir.cn/manifestation-or-symptom-vs/hospitallevel-vs"/>
     <version value="V1"/>
     <name value="hospitallevel"/>
     <title value="医院等级"/>

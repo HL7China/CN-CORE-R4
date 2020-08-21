@@ -272,14 +272,14 @@
 		<resource>
 			<reference>
 				<!-- 请求紧急程度（priority） -->
-				<reference value="http://StructureDefinition.hl7fhir.cn/request-priority"/>
+				<reference value="StructureDefinition/request-priority"/>
 			</reference>
 			<description value="请求紧急程度"/>
 		</resource>
 		<resource>
 			<reference>
 				<!-- 备注信息（Annotation） -->
-				<reference value="http://StructureDefinition.hl7fhir.cn/Annotation"/>
+				<reference value="StructureDefinition/Annotation"/>
 			</reference>
 			<description value="需要备注的额外信息，包括作者与创建时间。"/>
 		</resource>
@@ -305,7 +305,7 @@
 		<resource>
 			<reference>
 				<!-- 本地资源定义（SourceNumber） -->
-				<reference value="http://StructureDefinition.hl7fhir.cn/source-number"/>
+				<reference value="StructureDefinition/source-number"/>
 			</reference>
 			<description value="号源信息，描述号源时段中该时段 包括的总号源数和已经使用号源数。。"/>
 		</resource>
@@ -327,7 +327,7 @@
 			</reference>
 			<name value="既往史示例"/>
 			<description value="演示如何定义和引用既往史的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/previous-history"/>
+			<exampleCanonical value="StructureDefinition/previous-history"/>
 		</resource>
 
 		<resource>
@@ -337,7 +337,7 @@
 			</reference>
 			<name value="医护人员示例"/>
 			<description value="演示如何定义和引用医护人员的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Practitioner"/>
+			<exampleCanonical value="StructureDefinition/Practitioner"/>
 		</resource>
 
 
@@ -348,7 +348,7 @@
 			</reference>
 			<name value="门诊排班信息示例"/>
 			<description value="演示如何定义和引用门诊排班信息的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/outpatient-schedule"/>
+			<exampleCanonical value="StructureDefinition/outpatient-schedule"/>
 		</resource>
 
 
@@ -359,7 +359,7 @@
 			</reference>
 			<name value="门诊号源信息示例"/>
 			<description value="演示如何定义和引用门诊号源信息的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/outpatient-registration-source"/>
+			<exampleCanonical value="StructureDefinition/outpatient-registration-source"/>
 		</resource>
 
 
@@ -372,7 +372,7 @@
 			</reference>
 			<name value="组织机构示例"/>
 			<description value="演示如何定义和引用组织机构的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Organization"/>
+			<exampleCanonical value="StructureDefinition/Organization"/>
 		</resource>
 
 
@@ -383,7 +383,7 @@
 			</reference>
 			<name value="门诊诊室示例"/>
 			<description value="演示如何定义和引用门诊诊室的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/outpatient-consultation-room"/>
+			<exampleCanonical value="StructureDefinition/outpatient-consultation-room"/>
 		</resource>
 
 		<resource>
@@ -393,7 +393,7 @@
 			</reference>
 			<name value="医院示例"/>
 			<description value="演示如何定义和引用医院的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Organization"/>
+			<exampleCanonical value="StructureDefinition/Hospital"/>
 		</resource>
 
 
@@ -404,7 +404,7 @@
 			</reference>
 			<name value="病区示例"/>
 			<description value="演示如何定义和引用病区的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/EndemicArea"/>
+			<exampleCanonical value="StructureDefinition/EndemicArea"/>
 		</resource>
 
 		<resource>
@@ -414,7 +414,7 @@
 			</reference>
 			<name value="科室示例"/>
 			<description value="演示如何定义和引用科室的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Department"/>
+			<exampleCanonical value="StructureDefinition/Department"/>
 		</resource>
 
 		<resource>
@@ -424,7 +424,7 @@
 			</reference>
 			<name value="诊断示例"/>
 			<description value="演示如何定义和引用诊断的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Diagnose"/>
+			<exampleCanonical value="StructureDefinition/Diagnose"/>
 		</resource>
 
 		<resource>
@@ -434,7 +434,7 @@
 			</reference>
 			<name value="主诉示例"/>
 			<description value="演示如何定义和引用主诉的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/chief-complaint"/>
+			<exampleCanonical value="StructureDefinition/chief-complaint"/>
 		</resource>
 
 		<resource>
@@ -444,7 +444,7 @@
 			</reference>
 			<name value="检查申请示例"/>
 			<description value="演示如何定义和引用检查申请的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/inspect-request"/>
+			<exampleCanonical value="StructureDefinition/inspect-request"/>
 		</resource>
 
 		<resource>
@@ -454,7 +454,7 @@
 			</reference>
 			<name value="实验室检验申请示例"/>
 			<description value="演示如何定义和引用实验室检验申请的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-request"/>
+			<exampleCanonical value="StructureDefinition/laboratory-request"/>
 		</resource>
 
 

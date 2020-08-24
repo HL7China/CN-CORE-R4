@@ -111,10 +111,6 @@
       <display value="[string]"/>
      </valueCoding>
     </extension>
-    <!-- 0..1 入党日期-->
-    <extension url="registDate">
-      <valueDate value="2019-01-01"/>      
-    </extension>
   </extension>
   <!-- 0..1 参加工作日期-->
   <extension url="http://StructureDefinition.hl7fhir.cn/date-start-work">

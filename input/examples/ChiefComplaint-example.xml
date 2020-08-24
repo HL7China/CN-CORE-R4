@@ -35,7 +35,7 @@
   <abatementString value="2019-11-03日出现呕吐，下午昏迷并且伴随发热。。"/>
   
     <!-- 0..1 主诉记录日期 -->
-  <recordedDate value="2019-11-03"/>
+  <recordedDate value="2019-02-20T13:00:00Z"/>
   <!-- 0..1  记录者 -->
   <recorder>
     <!-- 0..1  Reference(Practitioner）关联医护人员 -->

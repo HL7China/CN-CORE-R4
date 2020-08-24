@@ -37,7 +37,7 @@
 		</coding>
 	</code>
 	<!-- 0..1 记录日期 -->
-	<recordedDate value="2019-2-20"/>
+	<recordedDate value="2019-02-20T13:00:00Z"/>
 	<!-- 0..1 诊断医生 -->
 	<asserter>
 		<reference value="Practitioner/123"/>

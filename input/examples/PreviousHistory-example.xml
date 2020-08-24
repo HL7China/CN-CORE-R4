@@ -34,7 +34,7 @@
  
 
   <!-- 0..1 既往史记录日期 -->
-  <recordedDate value="2019-11-03"/>
+  <recordedDate value="2019-02-20T13:00:00Z"/>
   
   <!-- 0..1  记录者 -->
   <recorder>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir"> 
-	<id value="inspectrequest-orderdetail-vs"/>
- <url value="http://ValueSet.hl7fhir.cn/inspectrequest-orderdetail-vs"/>
- <name value="inspectrequest-orderdetail-vs"/><!-- ?? 0..1 Name for this value set (computer friendly) -->
+	<id value="laboratoryrequest-orderdetail-vs"/>
+ <url value="http://ValueSet.hl7fhir.cn/laboratoryrequest-orderdetail-vs"/>
+ <name value="laboratoryrequest-orderdetail-vs"/><!-- ?? 0..1 Name for this value set (computer friendly) -->
  <title value="检验明细"/><!-- 0..1 Name for this value set (human friendly) -->
  <status value="draft"/><!-- 1..1 draft | active | retired | unknown -->
 <description value="关于 检验服务的细节和说明。比如检验的明细项目。"/>

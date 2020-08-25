@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- 此资源所引用的内容都将作为指南的一部分生成。持续更新中 -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
-	<id value="CN-Core-R4"/>
+	<id value="hl7fhir.cn.core.r4"/>
 	<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
@@ -23,7 +23,7 @@
 			<value value="contact@hl7fhir.cn"/>
 		</telecom>
 	</contact>
-	<description value="基于FHIR R4基础规范的中国核心规范实施指南。集成了GB国标、WS行标，且根据中国卫生行业特点对Observation资源进行了资源修剪、扩展注册。"/>
+	<description value="基于FHIR R4基础规范的中国核心规范实施指南。集成了GB国标、WS行标，且根据中国卫生行业特点对资源进行了资源修剪、扩展注册。"/>
 	<jurisdiction>
 		<coding>
 			<system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
@@ -70,6 +70,7 @@
 			<description value="联系方式，包括电话、传真、邮件等"/>
 		</resource>
 
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Identifier） -->
@@ -77,7 +78,7 @@
 			</reference>
 			<description value="标识符，唯一且明确地标识某个域中的实体。常作为业务标识符（业务ID)使用，在不同业务域中的唯一标识ID"/>
 		</resource>
-
+		
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Reference） -->
@@ -102,6 +103,7 @@
 			<description value="术语编码类型"/>
 		</resource>
 
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（AdministrativeDivision） -->
@@ -118,7 +120,6 @@
 			<description value="由开始和结束时间组成的时间段范围。"/>
 		</resource>
 
-
 		<!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>
@@ -131,7 +132,7 @@
 			</reference>
 			<name value="组织机构示例"/>
 			<description value="演示如何定义和引用组织机构的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Organization"/>
+			<exampleCanonical value="StructureDefinition/Organization"/>
 		</resource>
 
 		<resource>
@@ -141,6 +142,8 @@
 			</reference>
 			<name value="组织机构类型"/>
 		</resource>
+
+		
 		<resource>
 			<reference>
 				<!-- 卫生机构(组织)类别值域集 -->
@@ -148,6 +151,7 @@
 			</reference>
 			<name value="卫生机构(组织)类别"/>
 		</resource>
+		
 		<resource>
 			<reference>
 				<!-- 组织机构层级种类值域集 -->
@@ -155,6 +159,7 @@
 			</reference>
 			<name value="组织机构层级种类"/>
 		</resource>
+
 		<resource>
 			<reference>
 				<!-- 中华人民共国县级及县级以上行政区划 -->
@@ -162,7 +167,7 @@
 			</reference>
 			<name value="中华人民共国县级及县级以上行政区划"/>
 		</resource>
-
+		
 		<resource>
 			<reference>
 				<!-- 联系方式种类 -->
@@ -178,6 +183,8 @@
 			</reference>
 			<name value="经济类型分类"/>
 		</resource>
+
+
 
 		<!--    <resource>
       <reference>
@@ -206,20 +213,6 @@
 				<title value="核心规范"/>
 				<generation value="markdown"/>
 			</page>
-
-			<page>
-				<nameUrl value="terminology.html"/>
-				<title value="术语编码"/>
-				<generation value="markdown"/>
-			</page>
-
-			<page>
-				<nameUrl value="profiles.html"/>
-				<title value="资源结构与扩展"/>
-				<generation value="markdown"/>
-			</page>
-
-
 			<page>
 				<nameUrl value="downloads.html"/>
 				<title value="下载"/>

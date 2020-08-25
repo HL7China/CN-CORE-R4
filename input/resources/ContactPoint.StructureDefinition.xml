@@ -47,7 +47,7 @@
       <binding>
         <strength value="required" />
         <description value="联系方式种类" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-system" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-system-vs" />
       </binding>
     </element>
     <element id="ContactPoint.value">
@@ -65,7 +65,7 @@
       <binding>
         <strength value="required" />
         <description value="号码用途" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-use" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-use-vs" />
       </binding>
     </element>
     <element id="ContactPoint.rank">

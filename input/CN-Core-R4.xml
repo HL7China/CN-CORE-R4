@@ -54,6 +54,48 @@
 			</reference>
 			<description value="接受医疗健康服务的个人或动物，医疗过程是以患者为中心的。对交叉索进行中国本地化约定"/>
 		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Practitioner） -->
+				<reference value="StructureDefinition/Practitioner"/>
+			</reference>
+			<description value="直接或间接参与提供医疗健康服务的人员及其从业资格证"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Slot） -->
+				<reference value="StructureDefinition/outpatient-slot"/>
+			</reference>
+			<description value="门诊号源时段"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（schedule） -->
+				<reference value="StructureDefinition/outpatient-schedule"/>
+			</reference>
+			<description value="门诊排班，号源所属班次，是排班表、排期表的组成部分，该资源主要描述门诊排班"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Appointment ） -->
+				<reference value="StructureDefinition/outpatient-registration-source"/>
+			</reference>
+			<description value="该资源描述门诊号源信息，包括号源、挂号都是用该资源。"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Department） -->
+				<reference value="StructureDefinition/Department"/>
+			</reference>
+			<description value="描述科室基本信息"/>
+		</resource>
 		
 		<resource>
 			<reference>
@@ -63,6 +105,59 @@
 			<description value="正式或非正式认可的群体或组织。包括医疗集团、医院、院区、科室、公司、机构、公司、部门、社区团体、医疗实践团体、医保、商保等。"/>
 		</resource>
 
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Hospital） -->
+				<reference value="StructureDefinition/Hospital"/>
+			</reference>
+			<description value="描述医院基本信息"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（EndemicArea） -->
+				<reference value="StructureDefinition/EndemicArea"/>
+			</reference>
+			<description value="描述病区基本信息"/>
+		</resource>
+
+
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Diagnose） -->
+				<reference value="StructureDefinition/Diagnose"/>
+			</reference>
+			<description value="诊断信息，从医学角度对人们的精神和体质状态作出的判断。对正常人的健康状态、劳动能力和某一特定的生理过程的判断；司法部门判定血缘关系和伤害性质也属诊断。用来认识疾病的诊断最广泛，是治疗、预后、预防的前提。"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（ChiefComplaint）  -->
+				<reference value="StructureDefinition/chief-complaint"/>
+			</reference>
+			<description value="是病人（来访者）自述自己的症状或（和）体征、性质，以及持续时间等内容。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义 （ServiceRequest）-->
+				<reference value="StructureDefinition/inspect-request"/>
+			</reference>
+			<description value="医生下达检查申请单，包括多种检查类别，胃肠、影像、超声、病理等。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（ServiceRequest） -->
+				<reference value="StructureDefinition/laboratory-request"/>
+			</reference>
+			<description value="描述医院内 临床医生对患者提交实验室检验申请的资源。"/>
+		</resource>
+		
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Address） -->

@@ -1,260 +1,217 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- 此资源所引用的内容都将作为指南的一部分生成。持续更新中 -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
-	<id value="hl7fhir.cn.core.r4"/>
-	<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
+  <id value="CN-Core-R4"/>
+  <!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
-	<url value="https://www.hl7fhir.cn/ig/CN-Core-R4"/>
-	<!-- 此实施指南的版本。除非指定了 "propagate-version" 扩展元素，否则所有引用资源都将继承此版本号 -->
-	<version value="0.2.0"/>
-	<name value="CN Core Implementation Guide"/>
-	<title value="中国核心实施指南"/>
-	<status value="draft"/>
-	<experimental value="true"/>
-	<publisher value="HL7FHIR.CN" />
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="https://www.hl7fhir.cn"/>
-		</telecom>
-		<telecom>
-			<system value="email"/>
-			<value value="contact@hl7fhir.cn"/>
-		</telecom>
-	</contact>
-	<description value="基于FHIR R4基础规范的中国核心规范实施指南。集成了GB国标、WS行标，且根据中国卫生行业特点对资源进行了资源修剪、扩展注册。"/>
-	<jurisdiction>
-		<coding>
-			<system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
-			<code value="156"/>
-		</coding>
-		<text value="中国"/>
-	</jurisdiction>
-	<packageId value="hl7fhir.cn.core.r4" />
-	<!-- 参见 https://spdx.org/licenses/AGPL-3.0-or-later.html -->
-	<license value="AGPL-3.0-or-later" />
-	<!-- 实施指南里的内容是基于FHIR R4版本的 -->
-	<fhirVersion value="4.0.1"/>
-	<definition>
-		<!--0..* 生成IG需求信息。其中grouping节点可由IGPublisher自动定义，也可手动定义个性化需求。 -->
+  <url value="https://www.hl7fhir.cn/ig/CN-Core-R4"/>
+  <!-- 此实施指南的版本。除非指定了 "propagate-version" 扩展元素，否则所有引用资源都将继承此版本号 -->
+  <version value="0.2.0"/>
+  <name value="CN Core Implementation Guide"/>
+  <title value="中国核心实施指南"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HL7FHIR.CN" />
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.hl7fhir.cn"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="contact@hl7fhir.cn"/>
+    </telecom>
+  </contact>
+  <description value="基于FHIR R4基础规范的中国核心规范实施指南。集成了GB国标、WS行标，且根据中国卫生行业特点对Observation资源进行了资源修剪、扩展注册。"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
+      <code value="156"/>
+    </coding>
+    <text value="中国"/>
+  </jurisdiction>
+  <packageId value="hl7fhir.cn.core.r4" />
+  <!-- 参见 https://spdx.org/licenses/AGPL-3.0-or-later.html -->
+  <license value="AGPL-3.0-or-later" />
+  <!-- 实施指南里的内容是基于FHIR R4版本的 -->
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <!--0..* 生成IG需求信息。其中grouping节点可由IGPublisher自动定义，也可手动定义个性化需求。 -->
+    <resource>
+      <reference>
+        <!-- 本地资源定义（Organization） -->
+        <reference value="StructureDefinition/Organization"/>
+      </reference>
+      <description value="正式或非正式认可的群体或组织。包括医疗集团、医院、院区、科室、公司、机构、公司、部门、社区团体、医疗实践团体、医保、商保等。"/>
+    </resource>
 
+    <resource>
+      <reference>
+        <!-- 本地资源定义（Address） -->
+        <reference value="StructureDefinition/Address"/>
+      </reference>
+      <description value="符合中国描述地址习惯，并支持用行政区划编码生成详细地址和用于统计"/>
+    </resource>
 
+    <resource>
+      <reference>
+        <!-- 本地资源定义（CodeableConcept） -->
+        <reference value="StructureDefinition/CodeableConcept"/>
+      </reference>
+      <description value="可编码概念"/>
+    </resource>
 
+    <resource>
+      <reference>
+        <!-- 本地资源定义（ContactPoint） -->
+        <reference value="StructureDefinition/ContactPoint"/>
+      </reference>
+      <description value="联系方式，包括电话、传真、邮件等"/>
+    </resource>
 
+    <resource>
+      <reference>
+        <!-- 本地资源定义（Identifier） -->
+        <reference value="StructureDefinition/Identifier"/>
+      </reference>
+      <description value="标识符，唯一且明确地标识某个域中的实体。常作为业务标识符（业务ID)使用，在不同业务域中的唯一标识ID"/>
+    </resource>
 
+    <resource>
+      <reference>
+        <!-- 本地资源定义（Reference） -->
+        <reference value="StructureDefinition/Reference"/>
+      </reference>
+      <description value="引用应该是对实际FHIR资源的引用，并且应该是可解析的(允许访问控制、临时不可用等)。解析可以通过从URL检索来实现，也可以在适用的情况下通过资源类型来实现，将绝对引用作为标准URL处理并在本地注册表/存储库中查找它。"/>
+    </resource>
 
-
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Organization） -->
-				<reference value="StructureDefinition/Organization"/>
-			</reference>
-			<description value="正式或非正式认可的群体或组织。包括医疗集团、医院、院区、科室、公司、机构、公司、部门、社区团体、医疗实践团体、医保、商保等。"/>
-		</resource>
-
-
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Address） -->
-				<reference value="StructureDefinition/Address"/>
-			</reference>
-			<description value="符合中国描述地址习惯，并支持用行政区划编码生成详细地址和用于统计"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Period） -->
-				<reference value="StructureDefinition/Period"/>
-			</reference>
-			<description value="由开始和结束时间组成的时间段范围。"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（ContactPoint） -->
-				<reference value="StructureDefinition/ContactPoint"/>
-			</reference>
-			<description value="联系方式，包括电话、传真、邮件等"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（CodeableConcept） -->
-				<reference value="StructureDefinition/CodeableConcept"/>
-			</reference>
-			<description value="可编码概念"/>
-		</resource>
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Identifier） -->
-				<reference value="StructureDefinition/Identifier"/>
-			</reference>
-			<description value="标识符，唯一且明确地标识某个域中的实体。常作为业务标识符（业务ID)使用，在不同业务域中的唯一标识ID"/>
-		</resource>
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Reference） -->
-				<reference value="StructureDefinition/Reference"/>
-			</reference>
-			<description value="引用应该是对实际FHIR资源的引用，并且应该是可解析的(允许访问控制、临时不可用等)。解析可以通过从URL检索来实现，也可以在适用的情况下通过资源类型来实现，将绝对引用作为标准URL处理并在本地注册表/存储库中查找它。"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Coding） -->
-				<reference value="StructureDefinition/Coding"/>
-			</reference>
-			<description value="术语编码类型"/>
-		</resource>
-
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（OrganizationPicture） -->
-				<reference value="StructureDefinition/organization-picture"/>
-			</reference>
-			<description value="图片信息，主要描述 组织机构的相关图像信息，包括 logo和图片信息"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（AdministrativeDivision） -->
-				<reference value="StructureDefinition/AdministrativeDivision"/>
-			</reference>
-			<description value="行政区划编码，中国县级以上行政区"/>
-		</resource>
-
-		<!--<resource>
+    <resource>
+      <reference>
+        <!-- 本地资源定义（OrganizationPicture） -->
+        <reference value="StructureDefinition/organization-picture"/>
+      </reference>
+      <description value="图片信息，主要描述 组织机构的相关图像信息，包括 logo和图片信息"/>
+    </resource>
+    
+    
+    
+    <!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>
 </reference>
 </resource> -->
-
-
-
-
-
-
-
-		<resource>
-			<reference>
-				<!-- 资源示例 -->
-				<reference value="Organization/Organization-example"/>
-			</reference>
-			<name value="组织机构示例"/>
-			<description value="演示如何定义和引用组织机构的简单示例"/>
-			<exampleCanonical value="StructureDefinition/Organization"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 组织机构层级种类值域集 -->
-				<reference value="ValueSet/hierarchy-kind-vs"/>
-			</reference>
-			<name value="组织机构层级种类"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 组织机构类型值域集 -->
-				<reference value="ValueSet/Classification-for-organizations-vs"/>
-			</reference>
-			<name value="组织机构类型"/>
-		</resource>
-		<resource>
-
-			<reference>
-				<!-- 卫生机构(组织)类别值域集 -->
-				<reference value="ValueSet/health-institution-or-organization-category-vs"/>
-			</reference>
-			<name value="卫生机构(组织)类别"/>
-		</resource>
-		<resource>
-			<reference>
-				<!-- 中华人民共国县级及县级以上行政区划 -->
-				<reference value="ValueSet/administrative-division-of-China-vs"/>
-			</reference>
-			<name value="中华人民共国县级及县级以上行政区划"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 联系方式种类 -->
-				<reference value="ValueSet/contact-point-system-vs"/>
-			</reference>
-			<name value="联系方式种类"/>
-		</resource>
-
-
-
-		<!--    <resource>
+    <resource>
+      <reference>
+        <!-- 资源示例 -->
+        <reference value="Organization/Organization-example"/>
+      </reference>
+      <name value="组织机构示例"/>
+      <description value="演示如何定义和引用组织机构的简单示例"/>
+      <exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Organization"/>
+    </resource>
+        
+    <resource>
+      <reference>
+        <!-- 组织机构类型值域集 -->
+        <reference value="ValueSet/Classification-for-organizations-vs"/>
+      </reference>
+      <name value="组织机构类型"/> 
+    </resource>
+     <resource>
+      <reference>
+        <!-- 卫生机构(组织)类别值域集 -->
+        <reference value="ValueSet/health-institution-or-organization-category-vs"/>
+      </reference>
+      <name value="卫生机构(组织)类别"/>
+    </resource>
+    <resource>
+      <reference>
+        <!-- 值域集 -->
+        <reference value="ValueSet/hierarchy-kind-vs"/>
+      </reference>
+      <name value="组织机构层级种类"/>
+    </resource>
+    
+    <!--    <resource>
       <reference>
         <reference value="Library/example"/>
       </reference>
       <name value="Simple library example"/>
       <description value="A simple example showing how library is pre-loaded"/>
     </resource> -->
-		<page>
-			<!-- 若不指定目录页面，模板将强制为 toc.html -->
-			<nameUrl value="toc.html"/>
-			<title value="目录"/>
-			<generation value="html"/>
-			<page>
-				<nameUrl value="index.html"/>
-				<title value="首页"/>
-				<generation value="html"/>
-			</page>
-			<page>
-				<nameUrl value="background.html"/>
-				<title value="Background"/>
-				<generation value="html"/>
-			</page>
-			<page>
-				<nameUrl value="spec.html"/>
-				<title value="核心规范"/>
-				<generation value="markdown"/>
-			</page>
-			<page>
-				<nameUrl value="downloads.html"/>
-				<title value="下载"/>
-				<generation value="html"/>
-			</page>
-			<page>
-				<nameUrl value="changes.html"/>
-				<title value="指南历史版本"/>
-				<generation value="html"/>
-			</page>
-		</page>
-		<!-- copyright year 是IGPublisher的强制参数 -->
-		<parameter>
-			<code value="copyrightyear"/>
-			<value value="2020+"/>
-		</parameter>
-		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
-		<parameter>
-			<code value="releaselabel"/>
-			<value value="CI Build"/>
-		</parameter>
-		<parameter>
-			<code value="find-other-resources"/>
-			<value value="true"/>
-		</parameter>
-		<parameter>
-			<code value="path-resource"/>
-			<value value="input\history"/>
-		</parameter>
-		<parameter>
-			<code value="path-binary"/>
-			<value value="input\cql"/>
-		</parameter>
-		<parameter>
-			<code value="path-liquid"/>
-			<value value="templates\liquid"/>
-		</parameter>
-		<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <page>
+      <!-- 若不指定目录页面，模板将强制为 toc.html -->
+      <nameUrl value="toc.html"/>
+      <title value="目录"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="首页"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="background.html"/>
+        <title value="Background"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="spec.html"/>
+        <title value="核心规范"/>
+        <generation value="markdown"/>
+      </page>
+	  
+	  <page>
+        <nameUrl value="terminology.html"/>
+        <title value="术语编码"/>
+        <generation value="markdown"/>
+	  </page> 
+	
+	  <page>
+        <nameUrl value="profiles.html"/>
+        <title value="资源结构与扩展"/>
+        <generation value="markdown"/>
+	  </page>
+     
+	
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="下载"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="changes.html"/>
+        <title value="指南历史版本"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    <!-- copyright year 是IGPublisher的强制参数 -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2020+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+    <parameter>
+      <code value="find-other-resources"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\history"/>
+    </parameter>
+    <parameter>
+      <code value="path-binary"/>
+      <value value="input\cql"/>
+    </parameter>
+    <parameter>
+      <code value="path-liquid"/>
+      <value value="templates\liquid"/>
+    </parameter>
+    <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
       <code value="excludexml"/>
       <value value="true"/>
@@ -271,5 +228,5 @@
       <code value="excludemap"/>
       <value value="true"/>
     </parameter>-->
-	</definition>
+  </definition>
 </ImplementationGuide>

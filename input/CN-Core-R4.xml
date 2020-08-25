@@ -232,6 +232,94 @@
 			<description value="由开始和结束时间组成的时间段范围。"/>
 		</resource>
 
+		<resource>
+			<reference>
+				<!-- 本地资源定义（ChineseEthnicity） -->
+				<reference value="StructureDefinition/ChineseEthnicity"/>
+			</reference>
+			<description value="中华56个民族"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（ChineseName） -->
+				<reference value="StructureDefinition/ChineseName"/>
+			</reference>
+			<description value="中国卫生健康场景中使用的姓名"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（date-start-work） -->
+				<reference value="StructureDefinition/date-start-work"/>
+			</reference>
+			<description value="描述该人员参加工作的开始日期"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（is-work-for-multi-org） -->
+				<reference value="StructureDefinition/is-work-for-multi-org"/>
+			</reference>
+			<description value="是否多地点执业医师，医师多点执业：是指符合条件的执业医师经卫生行政部门注册后，受聘在两个以上医疗机构执业的行为。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Nationality） -->
+				<reference value="StructureDefinition/Nationality"/>
+			</reference>
+			<description value="国籍"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（politic-affiliation） -->
+				<reference value="StructureDefinition/politic-affiliation"/>
+			</reference>
+			<description value="政治面貌的编码及加入日期"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（sexual-distinction-of-human） -->
+				<reference value="StructureDefinition/sexual-distinction-of-human"/>
+			</reference>
+			<description value="描述人的生理性别  遵循标准 GB/T 2261.1"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 请求紧急程度（priority） -->
+				<reference value="StructureDefinition/request-priority"/>
+			</reference>
+			<description value="请求紧急程度"/>
+		</resource>
+		<resource>
+			<reference>
+				<!-- 备注信息（Annotation） -->
+				<reference value="StructureDefinition/Annotation"/>
+			</reference>
+			<description value="需要备注的额外信息，包括作者与创建时间。"/>
+		</resource>
+		<resource>
+			<reference>
+				<!-- 本地资源定义（BriefIntroduction） -->
+				<reference value="StructureDefinition/BriefIntroduction"/>
+			</reference>
+			<description value="简要介绍，包括科室、医院、医护人员介绍"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（SourceNumber） -->
+				<reference value="StructureDefinition/source-number"/>
+			</reference>
+			<description value="号源信息，描述号源时段中该时段 包括的总号源数和已经使用号源数。。"/>
+		</resource>
+
 		<!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>

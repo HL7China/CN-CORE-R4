@@ -2,7 +2,7 @@
 <Schedule xmlns="http://hl7.org/fhir">
 	<id value="OutpatientSchedule-example"/>
 	<meta>
-		<profile value="http://StructureDefinition.hl7fhir.cn/outpatient-schedule"/>
+	      <profile value="http://StructureDefinition.hl7fhir.cn/outpatient-schedule"/>
 	</meta>
 
 	<!-- 0..* 排班编号 -->

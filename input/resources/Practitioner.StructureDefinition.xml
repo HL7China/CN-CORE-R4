@@ -248,30 +248,6 @@
       </slicing>
       <short value="照片" />
       <definition value="该医护人员的照片" />
-      <type>
-        <code value="Attachment" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Attachment" />
-      </type>
-    </element>
-    <element id="Practitioner.photo:headPortrait">
-      <path value="Practitioner.photo" />
-      <sliceName value="headPortrait" />
-      <short value="头像" />
-      <definition value="该义务人员头像" />
-      <max value="1" />
-    </element>
-    <element id="Practitioner.photo:inchPhotos">
-      <path value="Practitioner.photo" />
-      <sliceName value="inchPhotos" />
-      <short value="寸照" />
-      <definition value="该医务人员寸照" />
-      <max value="1" />
-    </element>
-    <element id="Practitioner.photo:otherPhoto">
-      <path value="Practitioner.photo" />
-      <sliceName value="otherPhoto" />
-      <short value="其他照片" />
-      <definition value="该医务人员的其他照片信息" />
     </element>
     <element id="Practitioner.qualification">
       <path value="Practitioner.qualification" />

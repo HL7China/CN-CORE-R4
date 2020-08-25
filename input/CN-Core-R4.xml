@@ -23,7 +23,7 @@
 			<value value="contact@hl7fhir.cn"/>
 		</telecom>
 	</contact>
-	<description value="基于FHIR R4基础规范的中国核心规范实施指南。集成了GB国标、WS行标，且根据中国卫生行业特点对资源进行了资源修剪、扩展注册。"/>
+	<description value="基于FHIR R4基础规范的中国核心规范实施指南。集成了GB国标、WS行标，且根据中国卫生行业特点对Observation资源进行了资源修剪、扩展注册。"/>
 	<jurisdiction>
 		<coding>
 			<system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
@@ -38,14 +38,6 @@
 	<fhirVersion value="4.0.1"/>
 	<definition>
 		<!--0..* 生成IG需求信息。其中grouping节点可由IGPublisher自动定义，也可手动定义个性化需求。 -->
-
-
-
-
-
-
-
-
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Organization） -->
@@ -53,8 +45,6 @@
 			</reference>
 			<description value="正式或非正式认可的群体或组织。包括医疗集团、医院、院区、科室、公司、机构、公司、部门、社区团体、医疗实践团体、医保、商保等。"/>
 		</resource>
-
-
 
 		<resource>
 			<reference>
@@ -66,10 +56,10 @@
 
 		<resource>
 			<reference>
-				<!-- 本地资源定义（Period） -->
-				<reference value="StructureDefinition/Period"/>
+				<!-- 本地资源定义（CodeableConcept） -->
+				<reference value="StructureDefinition/CodeableConcept"/>
 			</reference>
-			<description value="由开始和结束时间组成的时间段范围。"/>
+			<description value="可编码概念"/>
 		</resource>
 
 		<resource>
@@ -82,18 +72,12 @@
 
 		<resource>
 			<reference>
-				<!-- 本地资源定义（CodeableConcept） -->
-				<reference value="StructureDefinition/CodeableConcept"/>
-			</reference>
-			<description value="可编码概念"/>
-		</resource>
-		<resource>
-			<reference>
 				<!-- 本地资源定义（Identifier） -->
 				<reference value="StructureDefinition/Identifier"/>
 			</reference>
 			<description value="标识符，唯一且明确地标识某个域中的实体。常作为业务标识符（业务ID)使用，在不同业务域中的唯一标识ID"/>
 		</resource>
+
 		<resource>
 			<reference>
 				<!-- 本地资源定义（Reference） -->
@@ -101,15 +85,6 @@
 			</reference>
 			<description value="引用应该是对实际FHIR资源的引用，并且应该是可解析的(允许访问控制、临时不可用等)。解析可以通过从URL检索来实现，也可以在适用的情况下通过资源类型来实现，将绝对引用作为标准URL处理并在本地注册表/存储库中查找它。"/>
 		</resource>
-
-		<resource>
-			<reference>
-				<!-- 本地资源定义（Coding） -->
-				<reference value="StructureDefinition/Coding"/>
-			</reference>
-			<description value="术语编码类型"/>
-		</resource>
-
 
 		<resource>
 			<reference>
@@ -121,24 +96,34 @@
 
 		<resource>
 			<reference>
+				<!-- 本地资源定义（Coding） -->
+				<reference value="StructureDefinition/Coding"/>
+			</reference>
+			<description value="术语编码类型"/>
+		</resource>
+
+		<resource>
+			<reference>
 				<!-- 本地资源定义（AdministrativeDivision） -->
 				<reference value="StructureDefinition/AdministrativeDivision"/>
 			</reference>
 			<description value="行政区划编码，中国县级以上行政区"/>
 		</resource>
 
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Period） -->
+				<reference value="StructureDefinition/Period"/>
+			</reference>
+			<description value="由开始和结束时间组成的时间段范围。"/>
+		</resource>
+
+
 		<!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>
 </reference>
 </resource> -->
-
-
-
-
-
-
-
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -146,15 +131,7 @@
 			</reference>
 			<name value="组织机构示例"/>
 			<description value="演示如何定义和引用组织机构的简单示例"/>
-			<exampleCanonical value="StructureDefinition/Organization"/>
-		</resource>
-
-		<resource>
-			<reference>
-				<!-- 组织机构层级种类值域集 -->
-				<reference value="ValueSet/hierarchy-kind-vs"/>
-			</reference>
-			<name value="组织机构层级种类"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/Organization"/>
 		</resource>
 
 		<resource>
@@ -165,12 +142,18 @@
 			<name value="组织机构类型"/>
 		</resource>
 		<resource>
-
 			<reference>
 				<!-- 卫生机构(组织)类别值域集 -->
 				<reference value="ValueSet/health-institution-or-organization-category-vs"/>
 			</reference>
 			<name value="卫生机构(组织)类别"/>
+		</resource>
+		<resource>
+			<reference>
+				<!-- 组织机构层级种类值域集 -->
+				<reference value="ValueSet/hierarchy-kind-vs"/>
+			</reference>
+			<name value="组织机构层级种类"/>
 		</resource>
 		<resource>
 			<reference>
@@ -188,7 +171,13 @@
 			<name value="联系方式种类"/>
 		</resource>
 
-
+		<resource>
+			<reference>
+				<!-- 经济类型分类 -->
+				<reference value="ValueSet/economic-type-classification-vs"/>
+			</reference>
+			<name value="经济类型分类"/>
+		</resource>
 
 		<!--    <resource>
       <reference>
@@ -217,6 +206,20 @@
 				<title value="核心规范"/>
 				<generation value="markdown"/>
 			</page>
+
+			<page>
+				<nameUrl value="terminology.html"/>
+				<title value="术语编码"/>
+				<generation value="markdown"/>
+			</page>
+
+			<page>
+				<nameUrl value="profiles.html"/>
+				<title value="资源结构与扩展"/>
+				<generation value="markdown"/>
+			</page>
+
+
 			<page>
 				<nameUrl value="downloads.html"/>
 				<title value="下载"/>

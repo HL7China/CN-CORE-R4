@@ -358,15 +358,7 @@
 		</resource>
 
 
-		<resource>
-			<reference>
-				<!-- 资源示例 -->
-				<reference value="Appointment/OutpatientRegistrationSource-example"/>
-			</reference>
-			<name value="门诊号源信息示例"/>
-			<description value="演示如何定义和引用门诊号源信息的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/outpatient-registration-source"/>
-		</resource>
+	
 		
 		<resource>
 			<reference>

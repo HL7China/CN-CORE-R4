@@ -40,6 +40,23 @@
 		<!--0..* 生成IG需求信息。其中grouping节点可由IGPublisher自动定义，也可手动定义个性化需求。 -->
 		<resource>
 			<reference>
+				<!-- 本地资源定义（PreviousHistory） -->
+				<reference value="StructureDefinition/previous-history"/>
+			</reference>
+			<description value="既往史，既往史又称过去病史，即就医时医生向患者问询的患者既往的健康状况和过去曾经患过的疾病等方面的问题。
+既往健康状况包括饮食习惯等。病人平时健康状况，可能与其现患疾病有一定的关系，故对分析判断现发疾病的病情具有重要的参考价值。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Patient） -->
+				<reference value="StructureDefinition/Patient"/>
+			</reference>
+			<description value="接受医疗健康服务的个人或动物，医疗过程是以患者为中心的。对交叉索进行中国本地化约定"/>
+		</resource>
+		
+		<resource>
+			<reference>
 				<!-- 本地资源定义（Organization） -->
 				<reference value="StructureDefinition/Organization"/>
 			</reference>

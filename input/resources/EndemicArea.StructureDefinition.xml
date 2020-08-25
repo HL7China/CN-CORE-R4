@@ -53,7 +53,6 @@
       <sliceName value="BriefIntroduction" />
       <short value="病区简介" />
       <definition value="对病区基本信息情况进行文字描述。" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -90,20 +89,11 @@
       <short value="其他业务代码" />
       <definition value="其它标识病区的业务ID" />
     </element>
-    <element id="Organization.type:healthInstitutionCategory">
-      <path value="Organization.type" />
-      <sliceName value="healthInstitutionCategory" />
-      <max value="0" />
-    </element>
-    <element id="Organization.type:ClassificationForOrganizations">
-      <path value="Organization.type" />
-      <sliceName value="ClassificationForOrganizations" />
-      <max value="0" />
-    </element>
     <element id="Organization.type:otherType">
       <path value="Organization.type" />
       <sliceName value="otherType" />
       <definition value="按其它分类维度对病区分类" />
+      <max value="1" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />

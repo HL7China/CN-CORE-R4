@@ -89,15 +89,10 @@
       <short value="其他业务代码" />
       <definition value="其它标识科室/部门的业务ID" />
     </element>
-    <element id="Organization.type:healthInstitutionCategory">
-      <path value="Organization.type" />
-      <sliceName value="healthInstitutionCategory" />
-      <max value="0" />
-    </element>
     <element id="Organization.type:ClassificationForOrganizations">
       <path value="Organization.type" />
       <sliceName value="ClassificationForOrganizations" />
-      <max value="0" />
+      <max value="1" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
@@ -136,11 +131,6 @@
       <fixedContactPoint>
         <system value="email" />
       </fixedContactPoint>
-    </element>
-    <element id="Organization.address.extension:adminDivision">
-      <path value="Organization.address.extension" />
-      <sliceName value="adminDivision" />
-      <max value="0" />
     </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf" />

@@ -89,7 +89,6 @@
       <type>
         <code value="Reference" />
         <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Schedule" />
       </type>
     </element>
     <element id="Slot.status">

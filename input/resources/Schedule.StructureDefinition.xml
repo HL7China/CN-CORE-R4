@@ -38,18 +38,6 @@
       <short value="号源所属班次，是排班表、排期表的组成部分" />
       <definition value="此资源是一个放置预约号源的容器，可以用于设置预约医疗服务的各种类型和班次计划使用的时间段，常用于排班的班次设置，如：白班、夜班、门诊上午、门诊下午等。" />
     </element>
-    <element id="Schedule.meta.security.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.meta.security.display" />
-    </element>
-    <element id="Schedule.meta.tag.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.meta.tag.display" />
-    </element>
     <element id="Schedule.identifier">
       <path value="Schedule.identifier" />
       <short value="班次的业务标识符" />
@@ -58,36 +46,6 @@
         <code value="Identifier" />
         <profile value="http://StructureDefinition.hl7fhir.cn/Identifier" />
       </type>
-    </element>
-    <element id="Schedule.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.identifier.type.coding.display" />
-    </element>
-    <element id="Schedule.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.identifier.type.text" />
-    </element>
-    <element id="Schedule.identifier.assigner.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.identifier.assigner.identifier.type.coding.display" />
-    </element>
-    <element id="Schedule.identifier.assigner.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.identifier.assigner.identifier.type.text" />
-    </element>
-    <element id="Schedule.identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.identifier.assigner.display" />
     </element>
     <element id="Schedule.active">
       <path value="Schedule.active" />
@@ -104,18 +62,6 @@
         <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
       </type>
     </element>
-    <element id="Schedule.serviceCategory.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.serviceCategory.coding.display" />
-    </element>
-    <element id="Schedule.serviceCategory.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.serviceCategory.text" />
-    </element>
     <element id="Schedule.serviceType">
       <path value="Schedule.serviceType" />
       <short value="服务项目分类" />
@@ -125,34 +71,10 @@
         <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
       </type>
     </element>
-    <element id="Schedule.serviceType.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.serviceType.coding.display" />
-    </element>
-    <element id="Schedule.serviceType.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.serviceType.text" />
-    </element>
     <element id="Schedule.specialty">
       <path value="Schedule.specialty" />
       <short value="专业要求" />
       <definition value="该班次中执行的医疗服务者的临床专业要求，如 骨科门诊、牙科门诊、心内科门诊。" />
-    </element>
-    <element id="Schedule.specialty.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.specialty.coding.display" />
-    </element>
-    <element id="Schedule.specialty.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.specialty.text" />
     </element>
     <element id="Schedule.actor">
       <path value="Schedule.actor" />
@@ -161,50 +83,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Patient" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Practitioner" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/PractitionerRole" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/RelatedPerson" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Device" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/HealthcareService" />
-        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Location" />
       </type>
-    </element>
-    <element id="Schedule.actor.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.actor.identifier.type.coding.display" />
-    </element>
-    <element id="Schedule.actor.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.actor.identifier.type.text" />
-    </element>
-    <element id="Schedule.actor.identifier.assigner.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.actor.identifier.assigner.identifier.type.coding.display" />
-    </element>
-    <element id="Schedule.actor.identifier.assigner.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.actor.identifier.assigner.identifier.type.text" />
-    </element>
-    <element id="Schedule.actor.identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.actor.identifier.assigner.display" />
-    </element>
-    <element id="Schedule.actor.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Schedule.actor.display" />
     </element>
     <element id="Schedule.planningHorizon">
       <path value="Schedule.planningHorizon" />

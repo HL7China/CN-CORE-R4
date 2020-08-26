@@ -30,7 +30,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="http://StructureDefinition.hl7fhir.cn/Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
@@ -89,15 +89,39 @@
       <short value="其他业务代码" />
       <definition value="其它标识科室/部门的业务ID" />
     </element>
-    <element id="Organization.type:healthInstitutionCategory">
+    <element id="Organization.type">
       <path value="Organization.type" />
-      <sliceName value="healthInstitutionCategory" />
-      <max value="0" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="机构种类、类别" />
+      <definition value="机构种类，如医院、卫生防疫站等。类别" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+      </type>
     </element>
-    <element id="Organization.type:ClassificationForOrganizations">
+    <element id="Organization.type:hierarchyKind">
       <path value="Organization.type" />
-      <sliceName value="ClassificationForOrganizations" />
-      <max value="0" />
+      <sliceName value="hierarchyKind" />
+      <short value="层级种类" />
+      <definition value="组织层级种类，如医院集团、医院、院区、科室等" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="组织层级种类" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/hierarchy-kind-vs" />
+      </binding>
+    </element>
+    <element id="Organization.type:otherType">
+      <path value="Organization.type" />
+      <sliceName value="otherType" />
+      <short value="其它分类" />
+      <definition value="按其它分类维度对组织机构分类" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
@@ -136,11 +160,6 @@
       <fixedContactPoint>
         <system value="email" />
       </fixedContactPoint>
-    </element>
-    <element id="Organization.address.extension:adminDivision">
-      <path value="Organization.address.extension" />
-      <sliceName value="adminDivision" />
-      <max value="0" />
     </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf" />

@@ -30,7 +30,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <baseDefinition value="http://StructureDefinition.hl7fhir.cn/Organization" />
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
@@ -53,6 +53,7 @@
       <sliceName value="BriefIntroduction" />
       <short value="病区简介" />
       <definition value="对病区基本信息情况进行文字描述。" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -89,39 +90,20 @@
       <short value="其他业务代码" />
       <definition value="其它标识病区的业务ID" />
     </element>
-    <element id="Organization.type">
+    <element id="Organization.type:healthInstitutionCategory">
       <path value="Organization.type" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <short value="机构种类、类别" />
-      <definition value="机构种类，如医院、卫生防疫站等。类别" />
-      <type>
-        <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
-      </type>
+      <sliceName value="healthInstitutionCategory" />
+      <max value="0" />
     </element>
-    <element id="Organization.type:hierarchyKind">
+    <element id="Organization.type:ClassificationForOrganizations">
       <path value="Organization.type" />
-      <sliceName value="hierarchyKind" />
-      <short value="层级种类" />
-      <definition value="组织层级种类，如医院集团、医院、院区、科室等" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <description value="组织层级种类" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/hierarchy-kind-vs" />
-      </binding>
+      <sliceName value="ClassificationForOrganizations" />
+      <max value="0" />
     </element>
     <element id="Organization.type:otherType">
       <path value="Organization.type" />
       <sliceName value="otherType" />
-      <short value="其它分类" />
-      <definition value="按其它分类维度对组织机构分类" />
+      <definition value="按其它分类维度对病区分类" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />

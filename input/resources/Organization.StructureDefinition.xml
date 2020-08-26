@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Organization" />
   <meta>
@@ -56,6 +56,7 @@
     <element id="Organization.extension:OrganizationPicture">
       <path value="Organization.extension" />
       <sliceName value="OrganizationPicture" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -99,7 +100,7 @@
       <binding>
         <strength value="required" />
         <description value="WS 218-2002" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/health-institution-or-organization-category-vs" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/health-institution-category-vs" />
       </binding>
     </element>
     <element id="Organization.type:hierarchyKind">

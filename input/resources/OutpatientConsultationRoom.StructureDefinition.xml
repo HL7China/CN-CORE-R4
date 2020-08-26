@@ -37,6 +37,10 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <type>
+        <code value="Identifier" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Identifier" />
+      </type>
     </element>
     <element id="Location.identifier:consultingRoomCode">
       <path value="Location.identifier" />
@@ -58,6 +62,52 @@
       <definition value="门诊诊室名称的拼音的首字母编码" />
       <max value="1" />
     </element>
+    <element id="Location.status">
+      <path value="Location.status" />
+      <short value="状态" />
+      <definition value="可描述该位置的状态，在位置状态发生变化的时候，作为标识符使用。&#xD;&#xA;正常使用 | 暂停使用 | 作废的" />
+    </element>
+    <element id="Location.status.extension">
+      <path value="Location.status.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Location.status.extension:status">
+      <path value="Location.status.extension" />
+      <sliceName value="status" />
+      <short value="状态" />
+      <definition value="可描述该位置的状态，在位置状态发生变化的时候，作为标识符使用。&#xD;&#xA;正常使用 | 暂停使用 | 作废的" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/resource-status" />
+      </type>
+    </element>
+    <element id="Location.status.extension:status.value[x]">
+      <path value="Location.status.extension.value[x]" />
+      <binding>
+        <strength value="example" />
+        <description value="诊室状态" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/location-status-vs" />
+      </binding>
+    </element>
+    <element id="Location.operationalStatus">
+      <path value="Location.operationalStatus" />
+      <short value="操作状态" />
+      <definition value="业务状况包括与床(但也可以适用于房间/单位/椅子/等)最相关的业务价值。例如隔离装置/透析椅)。这通常包括诸如污染、清洁和其他活动(如维护)等概念。" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OperationalStatus" />
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/operation-status-vs" />
+      </binding>
+    </element>
     <element id="Location.name">
       <path value="Location.name" />
       <short value="门诊诊室名称" />
@@ -72,6 +122,10 @@
       <short value="门诊诊室详细信息" />
       <definition value="有关门诊诊室的其他详细信息，可以作为进一步的信息显示" />
     </element>
+    <element id="Location.mode">
+      <path value="Location.mode" />
+      <max value="0" />
+    </element>
     <element id="Location.type">
       <path value="Location.type" />
       <slicing>
@@ -81,18 +135,35 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+      </type>
     </element>
     <element id="Location.type:LocationRoleType">
       <path value="Location.type" />
       <sliceName value="LocationRoleType" />
       <definition value="指示在该位置类型。 此处固定为 门诊诊室" />
       <max value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="LocationType" />
+        </extension>
+        <strength value="extensible" />
+        <description value="位置功能类型" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/location-role-type-vs" />
+      </binding>
     </element>
     <element id="Location.type:otherType">
       <path value="Location.type" />
       <sliceName value="otherType" />
       <short value="其他分类" />
       <definition value="按其它分类维度对位置的分类" />
+    </element>
+    <element id="Location.telecom">
+      <path value="Location.telecom" />
+      <short value="联系方式" />
+      <max value="0" />
     </element>
     <element id="Location.address">
       <path value="Location.address" />
@@ -101,7 +172,20 @@
     </element>
     <element id="Location.physicalType">
       <path value="Location.physicalType" />
+      <short value="物理类型" />
       <definition value="位置的物理形式，例如建筑物、房间、车辆、道路。该处固定为  房间&#xD;&#xA;该处描述门诊诊室，固定为  房间" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PhysicalType" />
+        </extension>
+        <strength value="example" />
+        <description value="位置物理形式" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/location-physical-type-vs" />
+      </binding>
+    </element>
+    <element id="Location.position">
+      <path value="Location.position" />
+      <max value="0" />
     </element>
     <element id="Location.managingOrganization">
       <path value="Location.managingOrganization" />
@@ -113,8 +197,15 @@
         <targetProfile value="http://StructureDefinition.hl7fhir.cn/Department" />
       </type>
     </element>
+    <element id="Location.partOf">
+      <path value="Location.partOf" />
+      <short value="父位置" />
+      <definition value="在物理上包含本位置的位置" />
+      <max value="0" />
+    </element>
     <element id="Location.hoursOfOperation">
       <path value="Location.hoursOfOperation" />
+      <short value="这个地方一周中通常开几天几次" />
       <definition value="该诊室的营业时间" />
     </element>
     <element id="Location.hoursOfOperation.daysOfWeek">
@@ -129,9 +220,17 @@
       <path value="Location.hoursOfOperation.closingTime" />
       <definition value="不是全天开放的情况下，门诊诊室的关闭时间" />
     </element>
+    <element id="Location.availabilityExceptions">
+      <path value="Location.availabilityExceptions" />
+      <short value="可用性异常描述" />
+      <definition value="我们的营业地点与正常营业地点的不同之处的描述，例如公众假期的供应情况。按照开放时间时间的详细说明，简洁地描述所有可能的正常网站可用性例外情况。" />
+    </element>
     <element id="Location.endpoint">
       <path value="Location.endpoint" />
+      <short value="提供对为该位置操作的服务的访问的技术端点" />
+      <definition value="提供对为该位置操作的服务的访问的技术端点" />
       <requirements value="组织可能在不同的位置拥有不同的系统，这些系统提供各种服务，并且需要能够定义技术连接细节，以便如何连接到它们，以及用于什么目的。" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

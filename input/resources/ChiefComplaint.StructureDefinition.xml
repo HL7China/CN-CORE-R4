@@ -70,6 +70,10 @@
       <short value="严重程度" />
       <definition value="临床医生对患者描述的病情严重程度的主观评估。" />
       <comment value="在可能的情况下，最好使用术语对严重性进行编码。" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+      </type>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ConditionSeverity" />
@@ -91,12 +95,20 @@
       <path value="Condition.subject" />
       <short value="患者" />
       <definition value="指示与状态记录相关联的患者或组。" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+      </type>
     </element>
     <element id="Condition.encounter">
       <path value="Condition.encounter" />
       <short value="相关就诊活动" />
       <definition value="创建此主诉的过程中或与此记录的创建紧密相关的医疗事件。" />
       <comment value="此主诉是在这个医疗就诊活动期间产生的，或与这个医疗就诊活动密切相关，但一些活动可能在就诊活动之前或之后开始，但是任然认为和该医疗活动相关。" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+      </type>
     </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />
@@ -123,6 +135,10 @@
       <path value="Condition.recorder" />
       <short value="主诉记录者" />
       <definition value="描述记录该资源的人员信息，在这里一般指医生和医生角色。" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+      </type>
     </element>
     <element id="Condition.asserter">
       <path value="Condition.asserter" />
@@ -140,6 +156,10 @@
       <path value="Condition.note" />
       <short value="备注" />
       <definition value="关于病情的附加信息。这是一个描述病情、诊断和预后的一般注释/注释条目。" />
+      <type>
+        <code value="Annotation" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Annotation" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

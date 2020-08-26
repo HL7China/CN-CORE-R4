@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="outpatient-registration-source" />
-  <url value="http://StructureDefinition.hl7fhir.cn/outpatient-registration-source" />
+  <url value="http://example.org/fhir/StructureDefinition/outpatient-registration-source" />
   <name value="OutpatientRegistrationSource" />
   <title value="门诊号源信息" />
   <status value="draft" />
@@ -35,7 +35,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Appointment" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
+  <baseDefinition value="http://StructureDefinition.hl7fhir.cn/Appointment" />
   <derivation value="constraint" />
   <differential>
     <element id="Appointment.identifier">
@@ -62,15 +62,19 @@
       <path value="Appointment.identifier" />
       <sliceName value="otherIdentifier" />
     </element>
-    <element id="Appointment.cancelationReason">
-      <path value="Appointment.cancelationReason" />
+    <element id="Appointment.status">
+      <path value="Appointment.status" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="cancelation-reason" />
+          <valueString value="AppointmentStatus" />
         </extension>
-        <strength value="example" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/appointment-cancellation-reason-vs" />
+        <strength value="required" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/appointment-status-vs" />
       </binding>
+    </element>
+    <element id="Appointment.cancelationReason">
+      <path value="Appointment.cancelationReason" />
+      <max value="0" />
     </element>
     <element id="Appointment.serviceCategory">
       <path value="Appointment.serviceCategory" />
@@ -167,13 +171,7 @@
     </element>
     <element id="Appointment.reasonCode">
       <path value="Appointment.reasonCode" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ApptReason" />
-        </extension>
-        <strength value="preferred" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/encounter-reason-vs" />
-      </binding>
+      <max value="0" />
     </element>
     <element id="Appointment.minutesDuration">
       <path value="Appointment.minutesDuration" />

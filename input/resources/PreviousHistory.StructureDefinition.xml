@@ -64,6 +64,23 @@
       <path value="Condition.category" />
       <max value="0" />
     </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity" />
+      <short value="严重程度" />
+      <definition value="临床医生对病情严重程度的主观评估。" />
+      <comment value="在可能的情况下，最好使用术语对严重性进行编码。" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConditionSeverity" />
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/condition-severity-vs" />
+      </binding>
+    </element>
     <element id="Condition.code">
       <path value="Condition.code" />
       <max value="0" />
@@ -76,12 +93,20 @@
       <path value="Condition.subject" />
       <short value="患者" />
       <definition value="指示与状态记录相关联的患者或组。" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+      </type>
     </element>
     <element id="Condition.encounter">
       <path value="Condition.encounter" />
       <short value="相关就诊活动" />
       <definition value="创建此既往症状的过程中或与此记录的创建紧密相关的医疗事件。" />
       <comment value="此既往症状是在这个医疗就诊活动期间产生的，或与这个医疗就诊活动密切相关，但一些活动可能在就诊活动之前或之后开始，但是任然认为和该医疗活动相关。" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+      </type>
     </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />
@@ -110,6 +135,7 @@
       <short value="既往史记录者" />
       <type>
         <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
@@ -134,12 +160,17 @@
       <path value="Condition.evidence" />
       <short value="理论依据" />
       <definition value="作为该既往史的理论依据，证据可以是编码的症状/表现的简单列表，或者是对观察结果或正式评估的引用，或者两者都有。&#xD;&#xA;code 或者detail 可以都存在也可以只存在一个，或者都不填。" />
+      <max value="0" />
     </element>
     <element id="Condition.note">
       <path value="Condition.note" />
       <short value="备注" />
       <definition value="关于病情的附加信息。这是一个描述病情、诊断和预后的一般注释/注释条目。" />
       <comment value="关于病情的附加信息。对于没有结构化注释的系统，它们可以在没有作者或时间的情况下简单地传递单个注释。这个元素可能需要包含在叙述中，因为它可能会修改信息，这是一个描述病情、诊断和预后的一般注释/注释条目。" />
+      <type>
+        <code value="Annotation" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Annotation" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

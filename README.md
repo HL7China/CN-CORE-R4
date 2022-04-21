@@ -9,4 +9,4 @@
 http://build.fhir.org/ig/HL7China/CN-CORE-R4 为本项目构建的在线指南的持续开发版本。
 
 
-https://www.hl7fhir.cn/ig/CN-Core-R4 将会是本指南的正式发布版本（尚未发布）
+https://www.hl7fhir.cn/ig/CN-Core-R4 将会是本指南的正式发布版本（尚未发布）。
